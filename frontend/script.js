@@ -1,10 +1,10 @@
 async function searchMovie(){
 
-const name=document.getElementById("movieName").value
+const name = document.getElementById("movieName").value
 
-const res=await fetch(`http://localhost:3000/movie/${name}`)
+const res = await fetch(`https://movie-review-1-71zb.onrender.com/movie/${name}`)
 
-const data=await res.json()
+const data = await res.json()
 
 displayMovie(data)
 
@@ -12,9 +12,9 @@ displayMovie(data)
 
 function displayMovie(movie){
 
-const result=document.getElementById("result")
+const result = document.getElementById("result")
 
-result.innerHTML=`
+result.innerHTML = `
 
 <h2>${movie.Title}</h2>
 
